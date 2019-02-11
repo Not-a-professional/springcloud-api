@@ -1,0 +1,30 @@
+server:
+  port: 3081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://liwei:wwwliwei001com@localhost:2080/eureka
+    healthcheck:
+      enabled: true
+sidecar:
+  port: 5678
+  health-uri: http://106.12.19.58:5678/main/health
+#  health-uri: http://localhost:5000/main/health
+spring:
+  application:
+    name: crawler
+  datasource:
+    url: jdbc:mysql://106.15.185.93:3306/clouddb01?useSSL=false
+    username: root
+    password: happyforeversy.
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource #SpringBoot2.0开始将Hikari作为默认连接池
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/test?useSSL=false
+#    data-username: root
+#    data-password: wwwliwei001com
+#    driver-class-name: com.mysql.jdbc.Driver
+  mvc:
+    view:
+      prefix: /pages/
+      suffix: .html

@@ -1,0 +1,16 @@
+server:
+  port: 3080
+eureka:
+  client:
+    service-url:
+#      defaultZone: http://liwei:wwwliwei001com@106.12.19.58:2080/eureka
+      defaultZone: http://liwei:wwwliwei001com@localhost:2080/eureka
+    healthcheck:
+      enabled: true
+#sidecar:
+#  port: 5678
+#  health-uri: http://106.12.19.58:5678/main/health
+#  health-uri: http://localhost:5000/main/health
+spring:
+  application:
+    name: api
